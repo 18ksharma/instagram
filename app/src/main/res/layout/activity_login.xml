@@ -27,5 +27,9 @@ tools:context=".LoginActivity">
     android:layout_width="match_parent"
     android:layout_height="64dp"
     android:text="@string/login"/>
-
+<Button
+    android:id="@+id/btnSignup"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:text="@string/signup"/>
 </LinearLayout>
