@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
-    /*private static final String TAG = "LoginActivity";
+    private static final String TAG = "LoginActivity";
     private EditText etUsername;
     private EditText etPassword;
     private Button btnLogin;
@@ -36,5 +36,5 @@ public class LoginActivity extends AppCompatActivity {
 
     private void loginUser(String username, String password) {
         Log.i(TAG, "Attempting to login user "+ username);
-    }*/
+    }
 }
