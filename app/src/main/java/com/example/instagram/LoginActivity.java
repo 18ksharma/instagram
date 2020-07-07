@@ -45,7 +45,6 @@ public class LoginActivity extends AppCompatActivity {
         ParseUser.logInInBackground(username, password, new LogInCallback() {
             @Override
             public void done(ParseUser user, ParseException e) {
-                Log.i(TAG, "Hello");
                 if (e!=null){
                     Log.e(TAG, "Issue with login", e);
                     Toast.makeText(LoginActivity.this, "Invalid username/password", Toast.LENGTH_SHORT).show();
