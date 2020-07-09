@@ -47,12 +47,12 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         //TODO: need to implement signup button
-        btnSignup.setOnClickListener(new View.OnClickListener() {
+        /*btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
-        });
+        });*/
     }
 
     private void loginUser(String username, String password) {
