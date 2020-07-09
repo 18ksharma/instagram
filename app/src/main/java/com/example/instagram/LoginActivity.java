@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         etUsername=findViewById(R.id.etUsername);
         etPassword=findViewById(R.id.etPassword);
         btnLogin=findViewById(R.id.btnLogin);
+        btnSignup=findViewById(R.id.btnSignup);
 
         ParseUser currentUser = ParseUser.getCurrentUser();
         if (currentUser != null) {
@@ -47,12 +48,13 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         //TODO: need to implement signup button
-        /*btnSignup.setOnClickListener(new View.OnClickListener() {
+        btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, SignupActivity.class);
+                startActivity(i);
             }
-        });*/
+        });
     }
 
     private void loginUser(String username, String password) {
