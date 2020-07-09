@@ -27,6 +27,11 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         this.posts = posts;
     }
 
+    public void addAll(List<Post> allposts) {
+        posts.addAll(allposts);
+        notifyDataSetChanged();
+    }
+
 
     @NonNull
     @Override
@@ -44,6 +49,15 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
     @Override
     public int getItemCount() {
         return posts.size();
+    }
+
+    public PostsAdapter (List <Post> posts){
+        this.posts = posts ;
+    }
+
+    public void clear() {
+        posts.clear();
+        notifyDataSetChanged();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
@@ -69,4 +83,15 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             }
         }
     }
+    // Clean all elements of the recycler
+    /*public static void clear() {
+        posts.clear();
+        notifyDataSetChanged();
+    }
+
+    // Add a list of items -- change to type used
+    public static void addAll(List<Post> list) {
+        posts.addAll(list);
+        notifyDataSetChanged();
+    }*/
 }
