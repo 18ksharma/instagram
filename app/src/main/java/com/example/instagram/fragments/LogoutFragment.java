@@ -1,7 +1,6 @@
 package com.example.instagram.fragments;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,9 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.instagram.LoginActivity;
 import com.example.instagram.R;
+import com.parse.ParseClassName;
+import com.parse.ParseFile;
 import com.parse.ParseUser;
 
 /**
@@ -23,7 +26,9 @@ import com.parse.ParseUser;
  * Use the {@link LogoutFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LogoutFragment extends Fragment {
+
+@ParseClassName("User")
+public class LogoutFragment extends Fragment{
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,6 +39,10 @@ public class LogoutFragment extends Fragment {
     private Button btnLogout;
     private Button btnTakeProfilePicture;
     private ImageView ivProfilePicture;
+
+    private ImageView ivPP;
+    private ParseFile img;
+    private TextView tvUser;
 
     public LogoutFragment() {
         // Required empty public constructor
@@ -72,11 +81,27 @@ public class LogoutFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated (@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         btnLogout=view.findViewById(R.id.btnLogout);
         btnTakeProfilePicture=view.findViewById(R.id.btnTakeProfilePicture);
         ivProfilePicture=view.findViewById(R.id.ivProfilePic);
+        tvUser=view.findViewById(R.id.tvUser);
+        ivPP=view.findViewById(R.id.ivPP);
+
+        ParseUser user = ParseUser.getCurrentUser();
+        img = user.getParseFile("profilePic");
+        tvUser.setText(user.getUsername());
+
+        if(img!=null){
+            ivProfilePicture.setVisibility(View.GONE);
+            ivPP.setVisibility(View.VISIBLE);
+            Glide.with(getContext()).load(img.getUrl()).into(ivPP);
+        }
+        else{
+            ivProfilePicture.setVisibility(View.VISIBLE);
+            ivPP.setVisibility(View.GONE);
+        }
 
 
 

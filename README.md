@@ -2,7 +2,7 @@
 
 **Instagram** is a photo sharing app using Parse as its backend.
 
-Time spent: **X** hours spent in total
+Time spent: **22** hours spent in total
 
 ## User Stories
 
@@ -33,22 +33,22 @@ The following **stretch** features are implemented:
 - [ ] User can comment on a post and see all comments for each post in the post details screen.
 - [ ] User can like a post and see number of likes for each post in the post details screen.
 
-The following **additional** features are implemented:
-
-- [ ] List anything else that you can get done to improve the app functionality!
-
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. How would you add an activity page (like the one on Instagram to display acccount notifications)?
+2. How would you display followers and allow them to interact? Would this require another model and table on Parse?
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+[Logging in, signing up, logging out, view posts, take photo&add to instagram feed] (screenshots/partialInstaDemo.gif)
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+[Refreshing, clicking on object] (screenshots/InstaClickandRefresh.gif)
+
+[User Login is persistenet & Shows icon] (screenshots/IconDemo.gif)
+
+GIF created with [Kap](http://www.getKap.co).
 
 ## Credits
 
@@ -63,7 +63,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [2020] [name of copyright owner]
+    Copyright [2020] [Kanika Sharma]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
