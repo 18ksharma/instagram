@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/ivPicture"
@@ -15,7 +15,18 @@
         tools:layout_editor_absoluteX="2dp"
         tools:layout_editor_absoluteY="82dp"
         tools:srcCompat="@tools:sample/avatars"
-        android:layout_below="@id/tvUser"/>
+        android:layout_below="@id/ivProfilePic"/>
+
+    <ImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:padding="8dp"
+        app:srcCompat="@drawable/instagram_user_filled_24"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="82dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvUser"
@@ -24,14 +35,72 @@
         android:padding="8dp"
         android:text="kaniika_"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_toRightOf="@id/ivProfilePic"/>
 
+    <ImageView
+        android:id="@+id/ivLike"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/ivPicture"
+        app:srcCompat="@drawable/ufi_heart"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="82dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/ivReply"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/ivPicture"
+        app:srcCompat="@drawable/ufi_comment"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="82dp"
+        android:layout_toRightOf="@id/ivLike"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/ivDm"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/ivPicture"
+        app:srcCompat="@drawable/direct"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="82dp"
+        android:layout_toRightOf="@id/ivReply"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/ivSave"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/ivPicture"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:tint="#000000"
+        app:srcCompat="@drawable/ufi_save"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="82dp"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:id="@+id/tvLikes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Likes"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_below="@id/ivLike"/>
     <TextView
         android:id="@+id/tvDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ivPicture"
-        android:lines="5"
+        android:layout_below="@id/tvLikes"
         android:padding="8dp"
         android:text="Caption"
         tools:layout_editor_absoluteX="16dp"

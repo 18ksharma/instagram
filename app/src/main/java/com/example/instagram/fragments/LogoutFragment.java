@@ -1,6 +1,7 @@
 package com.example.instagram.fragments;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.instagram.LoginActivity;
 import com.example.instagram.R;
@@ -30,7 +32,8 @@ public class LogoutFragment extends Fragment {
 
     // TODO: Rename and change types of parameters
     private Button btnLogout;
-    private String mParam2;
+    private Button btnTakeProfilePicture;
+    private ImageView ivProfilePicture;
 
     public LogoutFragment() {
         // Required empty public constructor
@@ -72,6 +75,10 @@ public class LogoutFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         btnLogout=view.findViewById(R.id.btnLogout);
+        btnTakeProfilePicture=view.findViewById(R.id.btnTakeProfilePicture);
+        ivProfilePicture=view.findViewById(R.id.ivProfilePic);
+
+
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
