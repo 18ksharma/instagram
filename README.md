@@ -42,11 +42,11 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-[Logging in, signing up, logging out, view posts, take photo&add to instagram feed] (screenshots/partialInstaDemo.gif)
+[Logging in, signing up, logging out, view posts, take photo&add to instagram feed, see post feed](screenshots/partialInstaDemo.gif)
 
-[Refreshing, clicking on object] (screenshots/InstaClickandRefresh.gif)
+[Refreshing, clicking on post to see details](screenshots/InstaClickandRefresh.gif)
 
-[User Login is persistenet & Shows icon] (screenshots/IconDemo.gif)
+[User Login is persistenet & Shows icon](screenshots/IconDemo.gif)
 
 GIF created with [Kap](http://www.getKap.co).
 
